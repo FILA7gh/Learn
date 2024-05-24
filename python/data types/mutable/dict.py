@@ -45,7 +45,7 @@
     Методы словарей:
 
         Python предоставляет множество встроенных методов для работы со словарями,
-         таких как get(), keys(), values(), items(), pop(), popitem(), update() и другие.
+        таких как get(), keys(), values(), items(), pop(), popitem(), update() и другие.
 
         my_dict = {'name': 'Alice', 'age': 25}
         print(my_dict.get('name'))  # выведет 'Alice'
