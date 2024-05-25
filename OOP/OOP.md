@@ -19,38 +19,12 @@
         Это позволяет скрывать внутреннюю реализацию объекта от внешнего мира и предоставлять
         доступ только к необходимым методам.
 
-        class Person:
-            def __init__(self, name, age):
-                self.__name = name  # Приватный атрибут
-                self.__age = age    # Приватный атрибут
-
-            def get_name(self):
-                return self.__name
-
-            def get_age(self):
-                return self.__age
-
 
     Наследование:
 
         Наследование позволяет создавать новые классы на основе существующих. Новый класс (подкласс)
         наследует свойства и методы базового класса (родительского класса), но также может добавлять новые свойства
         и методы или изменять существующие.
-
-        class Animal:
-            def __init__(self, name):
-                self.name = name
-
-            def speak(self):
-                pass
-
-        class Dog(Animal):
-            def speak(self):
-                return "Woof!"
-
-        class Cat(Animal):
-            def speak(self):
-                return "Meow!"
 
 
     Полиморфизм:
@@ -59,38 +33,11 @@
         даже если эти классы реализуют одинаковые методы по-разному.
         Это достигается через наследование и переопределение методов.
 
-        def make_animal_speak(animal):
-            print(animal.speak())
-
-        dog = Dog("Buddy")
-        cat = Cat("Whiskers")
-
-        make_animal_speak(dog)  # Вывод: Woof!
-        make_animal_speak(cat)  # Вывод: Meow!
-
 
     Абстракция:
 
         Абстракция заключается в выделении существенных характеристик объекта, игнорируя несущественные детали.
         В Python абстракция реализуется через абстрактные классы и методы.
-
-        from abc import ABC, abstractmethod
-
-        class Shape(ABC):
-            @abstractmethod
-            def area(self):
-                pass
-
-        class Rectangle(Shape):
-            def __init__(self, width, height):
-                self.width = width
-                self.height = height
-
-            def area(self):
-                return self.width * self.height
-
-        rect = Rectangle(4, 5)
-        print(rect.area())  # Вывод: 20
 
 
 
