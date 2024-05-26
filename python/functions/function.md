@@ -9,7 +9,9 @@
 Основы создания функций
 
     Для определения функции используется ключевое слово def, за которым следует имя функции и круглые скобки
-    с возможными параметрами. Тело функции определяется с отступом:
+    с возможными параметрами. 
+
+    Тело функции определяется с отступом:
 
         def greet(name):
             print(f"Hello, {name}!")
@@ -60,25 +62,25 @@
     Функции могут принимать произвольное количество позиционных и именованных аргументов, 
     используя *args и **kwargs соответственно:
     
-    def print_args(*args):
-        for arg in args:
-            print(arg)
+        def print_args(*args):
+            for arg in args:
+                print(arg)
+        
+        print_args(1, 2, 3)
+        # Output:
+        # 1
+        # 2
+        # 3
     
-    print_args(1, 2, 3)
-    # Output:
-    # 1
-    # 2
-    # 3
-    
-    def print_kwargs(**kwargs):
-        for key, value in kwargs.items():
-            print(f"{key}: {value}")
-    
-    print_kwargs(a=1, b=2, c=3)
-    # Output:
-    # a: 1
-    # b: 2
-    # c: 3
+        def print_kwargs(**kwargs):
+            for key, value in kwargs.items():
+                print(f"{key}: {value}")
+        
+        print_kwargs(a=1, b=2, c=3)
+        # Output:
+        # a: 1
+        # b: 2
+        # c: 3
 
 
 Вложенные функции и замыкания
