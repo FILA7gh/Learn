@@ -83,10 +83,10 @@ Python поддерживает модульную архитектуру, ко�
                         return "Function 1 from Module 1"
 
 
-            module2.py:
-            
-                def function2():
-                    return "Function 2 from Module 2"
+                module2.py:
+                
+                    def function2():
+                        return "Function 2 from Module 2"
 
 
         Использование пакета:
