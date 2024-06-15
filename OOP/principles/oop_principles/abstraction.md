@@ -12,16 +12,16 @@
         Абстрактный класс - это класс, который определяет абстрактные методы (методы без тела),
         которые должны быть реализованы в производных классах. Этот класс не может быть инстанциирован напрямую.
 
-    from abc import ABC, abstractmethod
-
-    class Shape(ABC):
-        @abstractmethod
-        def area(self):
-            pass
-
-        @abstractmethod
-        def perimeter(self):
-            pass
+        from abc import ABC, abstractmethod
+    
+        class Shape(ABC):
+            @abstractmethod
+            def area(self):
+                pass
+    
+            @abstractmethod
+            def perimeter(self):
+                pass
 
 
     Интерфейсы:
