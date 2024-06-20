@@ -26,7 +26,8 @@ AJAX (Asynchronous JavaScript and XML) — это технология, кото
 
     AJAX-запросы могут работать с различными форматами данных:
     
-        JSON (JavaScript Object Notation): Наиболее популярный формат данных для веб-приложений из-за его легкости и простоты обработки в JavaScript.
+        JSON (JavaScript Object Notation): Наиболее популярный формат данных для веб-приложений
+                                           из-за его легкости и простоты обработки в JavaScript.
         
         XML (Extensible Markup Language): Более сложный формат данных, используемый в некоторых старых системах.
 
