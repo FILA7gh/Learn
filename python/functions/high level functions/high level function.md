@@ -66,7 +66,7 @@
         
 
     reduce()
-    
+
         Функция reduce() из модуля functools сводит итерацию к одному значению, применяя функцию к парам элементов.
         
             from functools import reduce
