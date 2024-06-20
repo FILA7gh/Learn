@@ -27,9 +27,7 @@
 
 
 Реализация односвязного списка в Python
-
-Пример реализации односвязного списка:
-    
+ 
     class Node:
         def __init__(self, data):
             self.data = data
