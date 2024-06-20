@@ -22,16 +22,16 @@ annotate в Django — это метод ORM, который позволяет 
 
     
     Добавление поля средней цены всех книг к каждому объекту
+        
+        from django.db.models import Avg
+        from .models import Book
+        
+        books_with_avg_price = Book.objects.annotate(avg_price=Avg('price'))
+        for book in books_with_avg_price:
+            print(book.title, book.price, book.avg_price)
+        
+        Этот запрос добавляет поле avg_price к каждому объекту Book, содержащее среднее значение цены всех книг.
     
-    from django.db.models import Avg
-    from .models import Book
-    
-    books_with_avg_price = Book.objects.annotate(avg_price=Avg('price'))
-    for book in books_with_avg_price:
-        print(book.title, book.price, book.avg_price)
-    
-    Этот запрос добавляет поле avg_price к каждому объекту Book, содержащее среднее значение цены всех книг.
-
 
     Добавление поля с общим количеством книг к каждому объекту
         

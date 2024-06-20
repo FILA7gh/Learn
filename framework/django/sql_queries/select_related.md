@@ -11,7 +11,6 @@ select_related в Django — это метод, используемый для 
     Django выполнит отдельный запрос для каждой книги, чтобы получить соответствующего автора. Это может быть неэффективно,
     особенно при большом количестве книг.
 
-
     select_related решает эту проблему, выполняя SQL JOIN и загружая связанные объекты в одном запросе.
     Это значительно снижает количество обращений к базе данных.
 
@@ -41,7 +40,8 @@ select_related в Django — это метод, используемый для 
         print(book.title, book.author.name)
 
     Этот код приведет к выполнению одного запроса для получения всех книг и затем отдельного запроса
-    для получения автора каждой книги. Если у вас 10 книг, это приведет к выполнению 11 запросов (1 для книг и 10 для авторов).
+    для получения автора каждой книги. Если у вас 10 книг, 
+    это приведет к выполнению 11 запросов (1 для книг и 10 для авторов).
 
 
     Используя select_related:
@@ -78,9 +78,9 @@ select_related в Django — это метод, используемый для 
             author = models.ForeignKey(Author, on_delete=models.CASCADE)
             publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
 
-    Теперь мы можем предварительно загрузить как автора, так и издателя:
-
-        books = Book.objects.select_related('author', 'publisher').all()
+        Теперь мы можем предварительно загрузить как автора, так и издателя:
+    
+            books = Book.objects.select_related('author', 'publisher').all()
 
     
     Загрузка вложенных связанных объектов
@@ -94,10 +94,9 @@ select_related в Django — это метод, используемый для 
         class Author(models.Model):
             name = models.CharField(max_length=100)
     
-
-    Теперь мы можем предварительно загрузить как автора, так и его профиль:
-
-        books = Book.objects.select_related('author__profile').all()
+        Теперь мы можем предварительно загрузить как автора, так и его профиль:
+    
+            books = Book.objects.select_related('author__profile').all()
 
 
 Примечания
