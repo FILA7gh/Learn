@@ -20,31 +20,26 @@
 
     Разберем, что здесь происходит:
 
-        from rest_framework import generics: 
-
+        from rest_framework import generics:
             Это импорт модуля generics из Django Rest Framework, который содержит классы представлений 
             для обработки базовых операций CRUD (Create, Retrieve, Update, Delete).
     
 
-        from .models import Product и from .serializers import ProductSerializer: 
-
+        from .models import Product и from .serializers import ProductSerializer:
             Это импорт модели Product и сериализатора ProductSerializer из соответствующих файлов вашего приложения.
     
 
-        class ProductListCreateAPIView(generics.ListCreateAPIView): 
-
+        class ProductListCreateAPIView(generics.ListCreateAPIView):
             Это определение класса представления ProductListCreateAPIView, который наследуется 
             от класса ListCreateAPIView из модуля generics. ListCreateAPIView предоставляет функциональность 
             для просмотра списка объектов и создания новых объектов.
     
 
-        queryset = Product.objects.all(): 
-
+        queryset = Product.objects.all():
             Это определение запроса к базе данных для получения всех объектов модели Product. 
             Этот queryset будет использоваться для получения списка объектов.
     
-        serializer_class = ProductSerializer: 
-
+        serializer_class = ProductSerializer:
             Это определение класса сериализатора, который будет использоваться для сериализации 
             и десериализации данных. В данном случае это ProductSerializer.
 

@@ -21,23 +21,18 @@
         Это импорт функции path из модуля django.urls, которая используется для определения URL-адресов.
 
 
-    from .views import ProductListCreateAPIView, ProductRetrieveUpdateDestroyAPIView: 
-
+    from .views import ProductListCreateAPIView, ProductRetrieveUpdateDestroyAPIView:
         Это импорт представлений (views), которые будут обрабатывать запросы. 
         Обычно представления определены в файле views.py вашего приложения.
 
-
-    urlpatterns: 
-        
+    urlpatterns:
         Это список URL-адресов вашего приложения.
 
 
-    path('products/', ProductListCreateAPIView.as_view(), name='product-list-create'): 
-
+    path('products/', ProductListCreateAPIView.as_view(), name='product-list-create'):
         Это определение URL-адреса для списка продуктов. 
     
         Здесь:
-            
             'products/' - это строка, представляющая часть URL-адреса. В данном случае это просто строка 'products/'.
             
             ProductListCreateAPIView.as_view() - это вызов метода as_view() представления ProductListCreateAPIView. 
@@ -52,5 +47,5 @@
 
 
 Это всего лишь пример определения URL-адресов в Django Rest Framework. 
-Вы также можете использовать дополнительные функции маршрутизации, такие как include() для включения URL-адресов из других приложений, 
-и различные пути с параметрами для обработки динамических данных в URL.
+Вы также можете использовать дополнительные функции маршрутизации, такие как include() 
+для включения URL-адресов из других приложений, и различные пути с параметрами для обработки динамических данных в URL.
