@@ -83,7 +83,6 @@ Body (тело) — это часть HTTP-запроса или ответа, �
     В Django, тело запроса и ответа обрабатывается с помощью представлений (views) и сериализаторов. 
     Вот пример простого API, который принимает данные в теле запроса и возвращает ответ в формате JSON.
 
-
     Установка необходимых пакетов:
         
         pip install djangorestframework
@@ -110,19 +109,19 @@ Body (тело) — это часть HTTP-запроса или ответа, �
 
     Создание представления:
     
-    # views.py
-    from rest_framework.views import APIView
-    from rest_framework.response import Response
-    from rest_framework import status
-    from .serializers import UserSerializer
-    
-    class UserCreateView(APIView):
-        def post(self, request):
-            serializer = UserSerializer(data=request.data)
-            if serializer.is_valid():
-                # Обработка данных
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # views.py
+        from rest_framework.views import APIView
+        from rest_framework.response import Response
+        from rest_framework import status
+        from .serializers import UserSerializer
+        
+        class UserCreateView(APIView):
+            def post(self, request):
+                serializer = UserSerializer(data=request.data)
+                if serializer.is_valid():
+                    # Обработка данных
+                    return Response(serializer.data, status=status.HTTP_201_CREATED)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     
     Настройка маршрутов:
